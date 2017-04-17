@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dynamic shadows on scroll</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/dynamicOnScrollShadow.js">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .box {
+        display: flex;
+        align-items: center;
+        width: 180px;
+        height: 120px;
+        margin: auto;
+        padding: 5px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .box[data-shadow-strong='10'] {
+        background: rgb(224, 236, 255);
+      }
+
+      .box[data-shadow-strong='15'] {
+        background: rgb(196, 255, 198);
+      }
+
+      .box[data-shadow-strong='20'] {
+        background: rgb(255, 213, 196);
+      }
+      body {
+        padding: 1em;
+        background: #f7f7f7;
+      }
+      .row {
+        margin-bottom: 3em;
+      }
+    </style>
+  </head>
+  <body class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-sm box" data-shadow-strong="10"> .shadow-sm <br/> data-shadow-strong="10"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-md box" data-shadow-strong="15">.shadow-md <br/> data-shadow-strong="15"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+      <div class="col-sm-3">
+        <div class="shadow-lg box" data-shadow-strong="20">.shadow-lg <br/> data-shadow-strong="20"</div>
+      </div>
+    </div>
+
+  </body>
+</html>
